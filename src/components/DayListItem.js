@@ -6,15 +6,28 @@ import "./DayListItem.scss";
 export default function DayListItem(props) {
   let fullClass = classNames('day-list__item', 
     { 'day-list__item--full': !props.spots },
-    { 'day-list__item--selected': props.selected}
+    { 'day-list__item--selected': props.selected }
     )
   const setDayVar = () => {
     props.setDay(props.name);
   }
+
+  const formatSpots = () => {
+    if (props.spots === 0) {
+      return 'no spots remaining';
+    }
+    if (props.spots === 1) {
+      return props.spots+ ' spot remaining';
+    }
+    if (props.spots > 1) {
+      return props.spots+' spots remaining';
+    }
+  }
+  
   return (
     <li onClick={setDayVar} className={fullClass}>
       <h2 className="text--regular">{props.name}</h2> 
-      <h3 className="text--light">{props.spots} spots remaining</h3>
+      <h3 className="text--light">{formatSpots()}</h3>
     </li>
   );
 }
