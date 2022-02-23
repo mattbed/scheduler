@@ -6,11 +6,11 @@ import "./InterviewerList.scss";
 export default function InterviewerList(props) {
   const parsedInterviewerList = props.interviewers.map((element) => 
   <InterviewListItem 
-  id={element.id}
+  key={element.id}
   name={element.name}
   avatar={element.avatar}
   selected={(props.interviewer === element.id) ? true : false}
-  setInterviewer={props.setInterviewer}
+  setInterviewer={(event) => props.setInterviewer(element.id)}
   />)
   
   return (
