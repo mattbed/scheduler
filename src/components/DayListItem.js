@@ -9,7 +9,7 @@ export default function DayListItem(props) {
     { 'day-list__item--selected': props.selected }
     )
   const setDayVar = () => {
-    props.setDay(props.name);
+    props.onChange(props.name);
   }
 
   const formatSpots = () => {
@@ -25,7 +25,7 @@ export default function DayListItem(props) {
   }
   
   return (
-    <li onClick={setDayVar} className={fullClass}>
+    <li onClick={setDayVar} selected={props.selected} className={fullClass}>
       <h2 className="text--regular">{props.name}</h2> 
       <h3 className="text--light">{formatSpots()}</h3>
     </li>
