@@ -16,7 +16,6 @@ export default function Form(props) {
     props.onCancel();
   }
 
-
   const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   return (
