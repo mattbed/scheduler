@@ -16,6 +16,16 @@ export default function Application() {
 
   const setDay = day => setState({ ...state, day });
 
+  function cancelInterview(id) {
+    return axios.delete(`/api/appointments/${id}`)
+      .then((res) => {
+        state.appointments[id].interview = null;
+      }).catch((error) => {
+        console.log(error);
+      })
+  }
+
+
   function bookInterview(id, interview) {
     return axios.put(`/api/appointments/${id}`, {interview})
       .then((res) => {
@@ -57,6 +67,7 @@ export default function Application() {
       interview={interview}
       interviewers={dailyInterviewers}
       bookInterview={bookInterview}
+      cancelInterview={cancelInterview}
       />
     );
   });
