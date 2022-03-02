@@ -28,11 +28,10 @@ export default function useApplicationData() {
     // Update (add) method (takes edit parameter to sort between add/edit interview)
     update: function(key, edit) {
       const currentSpots = state.days[key].spots;
-      if (edit === "false") {
+      if (!edit) {
         return currentSpots -1;
-      } else if (edit === "true") {
-        return currentSpots;
-      }
+      } 
+      return currentSpots;
     },
   };
 
