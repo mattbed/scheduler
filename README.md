@@ -4,9 +4,20 @@ Interview Scheduler is a single page application designed to accomodate students
 
 ## Screengrabs
 
+### Main view
+With specific date selected
 !["Main page with specific date selected"](https://github.com/mattbed/scheduler/blob/master/docs/Scheduler_01.png?raw=true)
+
+### Add interview
+With interviewer selected
 !["Add interview page with Interviewer already selected"](https://github.com/mattbed/scheduler/blob/master/docs/Scheduler_02.png?raw=true)
+
+### Mouseover interview
+Showing interview options (edit, delete)
 !["Mouseover effect on interview showing options (edit, delete)"](https://github.com/mattbed/scheduler/blob/master/docs/Scheduler_04.png?raw=true)
+
+### Delete interview
+Confirmation upon clicking to delete an interview
 !["Confirm deleting an interview"](https://github.com/mattbed/scheduler/blob/master/docs/Scheduler_03.png?raw=true)
 
 
